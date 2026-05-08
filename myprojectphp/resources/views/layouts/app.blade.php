@@ -17,6 +17,7 @@
                     <a href="{{ route('products.index') }}" class="text-white text-decoration-none">Sản phẩm</a>
                     <a href="{{ route('categories.index') }}" class="text-white text-decoration-none">Danh mục</a>
                     <a href="{{ route('users.index') }}" class="text-white text-decoration-none">Người dùng</a>
+                    <a href="{{ route('admin.orders.index') }}" class="text-white text-decoration-none">📦 Đơn hàng</a>
                 @else
                     {{-- Menu Customer --}}
                     <a href="{{ route('shop.index') }}" class="text-white text-decoration-none">Cửa hàng</a>
@@ -30,13 +31,6 @@
                         @endif
                     </a>
                     <a href="{{ route('profile.orders') }}" class="text-white text-decoration-none">Đơn hàng</a>
-                @endif
-
-                @if(auth()->user()->role === 'admin')
-                    <a href="{{ route('products.index') }}" class="text-white text-decoration-none">Sản phẩm</a>
-                    <a href="{{ route('categories.index') }}" class="text-white text-decoration-none">Danh mục</a>
-                    <a href="{{ route('users.index') }}" class="text-white text-decoration-none">Người dùng</a>
-                    <a href="{{ route('admin.orders.index') }}" class="text-white text-decoration-none">📦 Đơn hàng</a>
                 @endif
 
                 <span class="text-white">|</span>
